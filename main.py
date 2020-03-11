@@ -5,18 +5,17 @@ from basic_import import *
 
 if __name__ == "__main__":
     # path = os.path.join(os.getcwd(), 'data_DA')
-    path = os.path.abspath('E:\data_DA')
+    path = os.path.abspath(os.getcwd())
 
-    set_DA = generate_set_DA(local_scale=1, T=1200, obs_type='linear', da_method='LETKF', a2=0.65, a1=0.5,
+    set_DA = generate_set_DA(local_scale=1, T=50,spinup=0, obs_type='linear', da_method='LETKF', a2=0.65, a1=0.5,
                              updateInterval=1,
-                             data_saved_file='LETKF' +'_non')
+                             data_saved_file='LETKF_result')
     set_DA['data_saved_path'] = path
     set_DA['obs_sigma'] =0.1
     # set_DA['obs_new_sigma'] = True  # True False
     # set_DA['obs_new_sigma_value'] = 0.1
     set_DA['std_infl'] = 2
     set_DA['pbar'] = True
-    set_DA['obs_type'] = 'non'
     set_DA['truth_new'] = False
     set_DA['change_seed2get_obs'] = False
 

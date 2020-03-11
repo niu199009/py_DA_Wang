@@ -1,5 +1,5 @@
 from LETKF import LETKF
-from LPF_GT import LPF_GT
+# from LPF_GT import LPF_GT
 # from all_settings import generate_settings,generare_metrics
 from basic_import import *
 import BMILorenz
@@ -31,8 +31,7 @@ def main_func(set_DA):
 
     yaml_dump(
         settings,set_DA,
-        name='settings',
-        path='E:\\DAPPER-master\\BMI\\streamingDataAssimilation-master\\codes_wang')
+        name='settings')
 
     ##########################################################################
     # to prepare data including observations, truth and initial ensemble  (or
